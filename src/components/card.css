@@ -1,6 +1,66 @@
 .carta {
     height: 16rem;
     width: 12rem;
-    background-color: yellow;
-    border-radius: .8rem;
+    border-radius: 0.8rem;
+    border: 8px solid white;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* White oval stripe */
+.carta::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: -100%;
+    width: 140%;
+    height: 10rem;
+    border-radius: 70%;
+    background: transparent;
+    border: white solid 20px;
+    transform: translateY(-50%) translateX(40%) rotate(-45deg);
+    /* opacity: 0.15; */
+}
+
+.centro {
+    height: 8rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 6rem;
+    color: white;
+    text-shadow:
+        -2px -2px 0 #000,
+        2px -2px 0 #000,
+        -2px 2px 0 #000,
+        2px 2px 0 #000;
+}
+
+.cabecalho, .rodape {
+    color: white;
+    height: 4rem;
+    width: 100%;
+    display: flex;
+    padding: 1rem;
+}
+
+.cabecalho {
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.rodape {
+    justify-content: flex-end;
+    align-items: flex-end;
+    transform: rotate(180deg);
+}
+
+.cabecalho span, .rodape span {
+    font-size: 2.5rem;
+    text-shadow:
+        -1px -1px 0 #000,
+        1px -1px 0 #000,
+        -1px 1px 0 #000,
+        1px 1px 0 #000;
 }
